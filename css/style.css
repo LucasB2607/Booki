@@ -18,6 +18,166 @@ body {
     justify-content: center;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+/* Commentaire CSS */
+
+.logo img {
+    width: 60px;
+    height: auto;
+    padding-left: 0px;
+    padding-top: 25px;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+nav li {
+    margin-right: 20px;
+    border-top: 1px solid transparent;
+    line-height: 40px;
+    box-sizing: border-box;
+    margin-top: 0px;
+}
+
+nav li:hover {
+    color:#0065FC;
+    border-top-color:#0065FC;
+}
+
+form {
+    display:flex;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#searchButton {
+    background-color: #0065FC;
+    color:white;
+    border:2px solid #0065FC;
+    padding: 10px;    
+    font-weight: 500;
+    font-size: medium;
+    width: 150px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+input {
+    padding:15px;
+    border: 2px solid #F2F2F2;
+    width:12%;
+}
+
+.icon-container {
+    background-color: #F2F2F2;
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    width: 2%;
+    justify-content: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#localisationInput::placeholder {
+    color:black;
+    font-weight: 600;
+    font-size: medium;
+    text-align: center;
+}
+
+#filterEconomic,
+#filterFamily,
+#filterRomantic,
+#filterBest {
+    border: 2px solid #d9d9d9;
+    padding: 15px 20px;
+    margin-right: 10px;
+    background-color: transparent;
+    border-radius: 30px;
+    color:black;
+    font-weight: 600;
+    font-size: medium;
+    margin-bottom: 20px;
+}
+
+#filterEconomic:hover,
+#filterFamily:hover,
+#filterRomantic:hover,
+#filterBest:hover {
+    border: 2px solid #d9d9d9;
+    padding: 15px 20px;
+    margin-right: 10px;
+    background-color: #DEEBFF;
+    border-radius: 30px;
+    color:black;
+    font-weight: 600;
+    font-size: medium;
+    margin-bottom: 20px;
+}
+
+.filter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-item img {
+    margin-right:10px;
+}
+
+.filters-section {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.filters-section h2 {
+    margin-right:20px;
+}
+
+
+/****** 
+6 mai - Cadre info : 
+- Flexbox sur toute la section via "cadre-info" pour center pour aligner horizontalement l'icone et le texte
+- un espace à droite de l'image avec cadre-info img
+- J'ai rajouté une classe à l'image (class="image-info") pour l'entourer du rond
+***********/
+
+.cadre-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cadre-info img {
+    margin-right: 12px;
+}
+
+.image-info {
+    border: 2px solid #f2f2f2;
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+
+
+/****** CSS de la partie Hébergements ***********/
+
+
 .main-container {
     width: 100%;
     max-width: 1440px;
@@ -76,6 +236,70 @@ a {
     width: 65%;
 }
 
+.card-in-rows {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom:30px;
+ }
+
+.hebergements-cards {
+    margin-top: 33px;
+}
+
+.hebergements img {
+    width: 100%;
+    height: 124px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.card-hebergements {
+    display: flex;
+    padding-bottom: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 4px;
+    flex: 1 0 0;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    width: 240px;
+    height: 200px;
+}
+
+.card-content-hebergement {
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+
+.card-title-hebergements {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.card-subtitle-hebergements {
+    margin: 0;
+}
+
+.card-rating-hebergements {
+    margin-bottom: 5px;
+}
+
+.section-show-more {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -121,6 +345,80 @@ a {
     margin-bottom: 5px;
 }
 
+
+/****** CSS de la partie Activités ***********/
+
+
+    /* Toute section activités (titre et cartes) */
+.activities {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+    /* Propriétés du container incluant 4 cartes */
+.activities-cards {
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    width: auto;
+    height: 439px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+    /* Propriétés de 1 carte spécifique (image + nom) */
+.card-activities {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    width: auto;
+    height: 439px;
+    }
+
+    /* Propriétés de toutes les images de la section activités */
+.activities img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 310px;
+    height: 380px;
+    object-fit: cover;
+}
+
+.card-title-activity {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+
+/****** CSS du footer ***********/
+
+.footer {
+   background-color: #f2f2f2;
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+   align-self: stretch;
+}
+
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap:15px;
+    padding-right: 250px;
+}
+
+.card-title-footer {
+    font-size: 18px;
+    font-weight: 700;
+    margin:0px;
+}
 
 
 
