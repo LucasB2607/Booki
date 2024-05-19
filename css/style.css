@@ -427,6 +427,67 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .filters-section {
+        flex-direction: column; /* Bouton filtre au dessus en tablette */
+    }
+
+    input {
+        width: 18%; /* Champ recherche plus large pour permettre placeholder tenir en entier */
+    }
+
+
+                            /* Propriétés tablette des cartes activités */
+
+    /* Container incluant 4 cartes */
+.activities-cards {
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    width: auto;
+    height: 200px;
+    padding-top: 30px;
+    padding-bottom: 85px;
+}
+
+    /* 1 carte spécifique (image + nom) */
+.card-activities {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    width: auto;
+    height: auto;
+    min-height: 275px;
+    }
+
+    /* Toutes les images de la section activités */
+.activities img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 100%;
+    min-width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content-activity {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 7px; 
+}
+
+
+/* Footer tablette */
+ .card-footer {
+     padding-right: 125px;
+ }
+ 
+
+/* Propriétés déjà pré-définies */
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -458,6 +519,9 @@ a {
         font-size: 13px;
     }
 }
+
+
+
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
