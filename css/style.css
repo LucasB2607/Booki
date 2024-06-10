@@ -68,7 +68,7 @@ form {
     background-color: #0065FC;
     color:white;
     border:2px solid #0065FC;
-    padding: 10px;    
+    padding: 15px;    
     font-weight: 500;
     font-size: medium;
     width: 150px;
@@ -253,6 +253,7 @@ a {
     height: 124px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+    object-fit: cover;
 }
 
 .card-hebergements {
@@ -265,8 +266,8 @@ a {
     flex: 1 0 0;
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    height: 215px;
 }
 
 .card-hebergements {
@@ -384,13 +385,17 @@ a {
     }
 
     /* Propriétés de toutes les images de la section activités */
-.activities img {
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    width: 310px;
-    height: 380px;
-    object-fit: cover;
-}
+    .activities img {
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+    }
+
+    .activities-cards a {
+        width: 100%;
+    }
 
 .card-title-activity {
     font-size: 16px;
@@ -407,6 +412,7 @@ a {
    flex-direction: row;
    align-items: flex-start;
    align-self: stretch;
+   justify-content: space-between;
 }
 
 
@@ -417,7 +423,7 @@ a {
     padding-top: 20px;
     padding-bottom: 20px;
     gap:15px;
-    padding-right: 250px;
+    padding-right: 50px;
 }
 
 .card-title-footer {
@@ -484,6 +490,12 @@ a {
     padding-top: 7px; 
 }
 
+/* ACTIVITÉS - Tablette (pour l'image pas assez large) */
+
+
+.activities-cards a {
+    width: 100%;
+}
 
 /* HEBERGEMENTS - Tablette */
 
@@ -499,18 +511,6 @@ a {
     width: 100%;
 }
 
-/* ACTIVITÉS - Tablette (pour l'image pas assez large) */
-
-
-.activities-cards a {
-    width: 100%;
-}
-
-/* Footer tablette */
- .card-footer {
-     padding-right: 115px;
- }
- 
 
 /* Propriétés déjà pré-définies */
 
@@ -614,13 +614,12 @@ a {
         padding: 15px;
         position: relative; 
         right: 15px;
-        text-indent: -9999px;
         border-radius: 15px;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
 
     input {
-        width:60%;
+        width:90%;
         border-right: none;
     }
 
@@ -657,6 +656,13 @@ a {
         text-align: center;
     }
 
+    #filterEconomic:hover,
+    #filterFamily:hover,
+    #filterRomantic:hover,
+    #filterBest:hover {
+    margin-bottom: 10px;
+}
+
     .filter-item {
         display: flex;
         justify-content: flex-start ;
@@ -685,6 +691,10 @@ a {
 
     .hebergements-and-populaires .hebergements {
         margin-top: 20px;
+        }
+
+    .card-hebergements {
+        height: 200px;
         }
 
     /* Partie Populaires MOBILE */
@@ -761,22 +771,62 @@ a {
         right: 0;
      }
      
-     .card-footer {
-         display: flex;
-         flex-direction: column;
-         padding-left: 20px;
-         padding-top: 20px;
-         padding-bottom: 20px;
-         gap: 15px;
-         width: calc(100% - 20px); 
-         box-sizing: border-box;
-     }
 
     
 
      .activities {
         margin-bottom: 650px; /* Pour avoir footer sous Activités */
     }
+
+    .searchButton1 {
+        display: none; /* Pour masquer le bouton "Rechercher" sur mobile */
+    }
+
+}
+
+
+/* All devices bigger than 768px - Pour masquer le span icone recherche */
+
+
+@media (min-width: 767.98px) {
+
+    .searchButton2 {
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+/* VERY Small devices (phones, less than 443px) */
+@media (max-width: 442px) {
+
+
+
+    .filter-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #filterEconomic,
+    #filterFamily,
+    #filterRomantic,
+    #filterBest {
+        padding-right: 10px;
+        padding-left:10px;
+    }
+
+    #filterEconomic:hover,
+    #filterFamily:hover,
+    #filterRomantic:hover,
+    #filterBest:hover {
+        padding-right: 10px;
+        padding-left:10px;
+}
+
 
 
 }
